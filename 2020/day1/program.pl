@@ -16,6 +16,12 @@ For each number N on a line in the input file, the following fact is asserted:
 
 ** to get the solution for the both parts:
 	?- importfacts(<name of the input file>), solution_part1(Solution1), solution_part2(Solution2).
+	
+-----------------	Tests 	-------------------
+
+?- importfacts(input_expl), solution_part1(Solution1), Solution1=514579.
+?- importfacts(input_expl), solution_part2(Solution2), Solution2=241861950.
+
 
 */
 
