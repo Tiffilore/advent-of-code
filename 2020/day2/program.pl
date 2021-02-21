@@ -82,6 +82,7 @@ importfacts(File) :-
 	retractall(entry(_,_)),
 	open(File, read, Stream),
 	phrase_from_stream(input, Stream),
+	close(Stream),
 	!.
 
 input -->
