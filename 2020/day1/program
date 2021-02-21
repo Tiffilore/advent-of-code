@@ -9,13 +9,13 @@ For each number N on a line in the input file, the following fact is asserted:
 -----------------	Questions to obtain Solutions 	-------------------
 
 ** to get the solution for the first part:
-	? importfacts(<name of the input file>), solution_part1(Solution).
+	?- importfacts(<name of the input file>), solution_part1(Solution).
 
 ** to get the solution for the second part:
-	? importfacts(<name of the input file>), solution_part2(Solution).
+	?- importfacts(<name of the input file>), solution_part2(Solution).
 
 ** to get the solution for the both parts:
-	? importfacts(<name of the input file>), solution_part1(Solution1), solution_part2(Solution2).
+	?- importfacts(<name of the input file>), solution_part1(Solution1), solution_part2(Solution2).
 
 */
 
