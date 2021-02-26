@@ -25,5 +25,22 @@ Thus, it has been implemented together:
 Solution1 = 29221323,
 Solution2 = 4389369.
 ```
+### Additional Solution
+
+Meanwhile, a second solution predicate has been implemented, which is rather procedural than declarative.
+The difference in efficiency is vast:
+
+```prolog
+?- time(solutions(input, Solution1, Solution2)).
+% 23,792,318 inferences, 1.492 CPU in 1.492 seconds (100% CPU, 15941963 Lips)
+Solution1 = 29221323,
+Solution2 = 4389369.
+
+?- time(solutions2(input, Solution1, Solution2)).
+% 1,009,200 inferences, 0.113 CPU in 0.114 seconds (100% CPU, 8914711 Lips)
+Solution1 = 29221323,
+Solution2 = 4389369.
+```
+
 
 
