@@ -1,4 +1,7 @@
 ## --- Day 7: Handy Haversacks ---
+
+*implemented in [SWI-Prolog](https://www.swi-prolog.org/)*.
+
 ### Description of the puzzle:
 
 [link!](https://adventofcode.com/2020/day/7
