@@ -68,6 +68,26 @@ solutions(File, Solution1, Solution2) :-
 
 
 
+solutions2(File, Solution1, Solution2) :-
+	read_numbers(File, Numbers),
+	play(Numbers, Solution1), !,
+	valid_infix(Numbers, Solution1, Infix),
+	max_list(Infix, Max),
+	min_list(Infix, Min),
+	Solution2 is Min + Max,
+	!.
+
+valid_infix(List, X, Infix) 	:- valid_prefix(List, X, 0, [], Infix), !.
+valid_infix([_|Tail], X, Infix) :- valid_infix(Tail, X, Infix).
+
+valid_prefix(_, S, S, Infix, Infix) 	:- !.
+valid_prefix(_, S, SumAcc, _, _) 	:- SumAcc >S, fail, !.
+valid_prefix([H|Rest], S, SumAcc, PrefixAcc, Infix) :- 
+	SumAcc2 is SumAcc + H,
+	valid_prefix(Rest, S, SumAcc2, [H|PrefixAcc], Infix). % reverses the possible infix
+
+
+	
 
 
 
