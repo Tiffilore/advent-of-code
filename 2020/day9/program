@@ -1,0 +1,74 @@
+/******************************************************** 
+
+	--- Day 9: Encoding Error ---
+
+********************************************************/
+
+
+/******************************************************** 
+
+	read code in 
+
+********************************************************/
+
+read_numbers(File, Numbers) :-
+	open(File, read, Stream),
+	read_string(Stream, _, Str), split_string(Str, "\n", "\n", Lines),
+	close(Stream),
+	maplist(number_string, Numbers, Lines).
+
+
+
+
+/******************************************************** 
+
+	Part 1 
+
+********************************************************/
+
+solution_part1(File, Solution) :-
+	read_numbers(File, Numbers),
+	play(Numbers, Solution), !.
+
+
+play([Head|Tail], Solution) :-
+	length(Prefix, 25),
+	append(Prefix, [Candidate|_], [Head|Tail]),
+	member(X, Prefix),
+	Y is Candidate - X,
+	\+ X is Y,
+	member(Y, Prefix),
+	play(Tail, Solution),
+	!.
+
+play(Numbers, Solution) :- %\+valid(Numbers), !,
+	nth0(25, Numbers, Solution),
+	!.
+
+
+/******************************************************** 
+
+	Part 1 + 2
+
+********************************************************/
+
+solutions(File, Solution1, Solution2) :-
+	read_numbers(File, Numbers),
+	play(Numbers, Solution1), !, 
+	append(Prefix, _, Numbers), 
+	append(_, Infix, Prefix),
+	length(Infix, Length),
+	Length > 1,
+	sum_list(Infix, Solution1),
+	max_list(Infix, Max),
+	min_list(Infix, Min),
+	Solution2 is Min + Max,
+	!.
+
+
+
+
+
+
+
+
