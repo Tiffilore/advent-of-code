@@ -42,3 +42,20 @@ If the rules contain direct or indirect cycles, there is the threat of getting i
 	contains(Col1, [..., bags(_, Col2), ...]). 
 	contains(Col2, [..., bags(_, Col1), ...]). 
 ```
+
+### Example Questions
+
+
+```prolog
+?- solution_part1(input_expl, Solution).
+Solution = 4.
+
+?- solution_part2(input_expl, Solution).
+Solution = 32.
+
+?- solution_part1(input, Solution).
+Solution = 296.
+
+?- solution_part2(input, Solution).
+Solution = 9339.
+```
