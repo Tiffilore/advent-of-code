@@ -25,4 +25,23 @@ on the length of this chain. Bot how? I calculated it for a sequence of number, 
 Putting the result sequence <code>[1,1,2,4,7,13,24,44,81,149,..]</code> into a search engine gave my that it is a sequence of Tribonacci numbers.
 I don't know why it is the Tribonacci numbers, but still use this function.
 
+### Example Questions
+
+
+```prolog
+?- solution_part1(input_expl1, Solution1), solution_part2(input_expl1, Solution2).
+Solution1 = 35,
+Solution2 = 8.
+
+?- solution_part1(input_expl2, Solution1), solution_part2(input_expl2, Solution2).
+Solution1 = 220,
+Solution2 = 19208.
+
+?- solution_part1(input, Solution1), solution_part2(input, Solution2).
+Solution1 = 1625,
+Solution2 = 3100448333024.
+```
+
+
+
 
