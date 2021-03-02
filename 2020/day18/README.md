@@ -26,9 +26,10 @@ It's only implemented for the second part of the puzzle here.
 
 #### Version 2
 
-This version assigns the two operators to precedence classes and provides general rules for parsing operators 
+This version assigns the two operators to **precedence classes** and provides general rules for parsing operators 
 based on their precedence class.
-I am trying to avoid as much backtracking as possible and would like a lookahead of 1.
+I assume it to be pretty close to a **Pratt Parser**. 
+I am trying to avoid as much backtracking as possible and aiming for a lookahead of 1.
 This version also is only implemented for the second part of the puzzle here.
 
 
