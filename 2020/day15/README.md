@@ -25,7 +25,7 @@ I solved this puzzle without recursion to keep the stack minimal. With simple re
 I did not memorize all turns and corresponding spoken numbers, but for each spoken number only the last turn it was spoken.
 Still, the list of memorized spoken numbers is large.
 
-To look at the growth in memory and thus execution time, I wrote a predicate to gather statistic data: `export_statistics(Stops, File_out)`. 
+To look at the growth in memory and the execution time, I wrote a predicate to gather statistic data: `export_statistics(Stops, File_out)`. 
 `Stops` is a list of numbers. For each number in this list, it proves the predicate `solution/3`  with the my puzzle input 
 `[0,3,1,6,7,5]` as start sequence. It then writes the number, the  solution, the number of memorized spoken words and the execution time into the file named
 `File_out`.
