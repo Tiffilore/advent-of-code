@@ -67,7 +67,7 @@ export_statistics(Stops, File_out):-
 	List=[1,0,15,2,10,13], 
 	member(Stop,Stops),
 	statistics(walltime, [_,_]), 
-	solve(List, Stop, Solution),
+	solution(List, Stop, Solution),
 	findall(_, last_turn(_,_), Bag), 
 	length(Bag, L),
 	statistics(walltime, [_,ExecutionTime]), 
