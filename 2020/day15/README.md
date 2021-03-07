@@ -30,10 +30,14 @@ To look at the growth in memory and thus execution time, I wrote a predicate to 
 `[0,3,1,6,7,5]` as start sequence. It then writes the number, the  solution, the number of memorized spoken words and the execution time into the file named
 `File_out`.
  
-
-
-```prolog
-
+ The following two graphics are the result of 
+```bash
+STOPS="[10,100,1000,2020,10000,50000,100000,500000,1000000 ,2000000,3000000,4000000,5000000,6000000,7000000,8000000,9000000,10000000]"
+swipl -s program -g "export_statistics($STOPS, data),halt." 1>&1 | sed 's/ERROR: halt\/1.*/True/g'
+gnuplot plot_data
 
 ```
-
+<p float="left">
+  <img src="./memory" width="470" />
+  <img src="./exec" width="470" /> 
+</p>
