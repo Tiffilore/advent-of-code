@@ -12,8 +12,11 @@
 ### Example Questions
 
 ```prolog
+?- solution([0,3,1,6,7,5], 2020, Solution).
+Solution = 852.
 
-
+?- solution([0,3,1,6,7,5], 30000000, Solution).
+Solution = 6007666.
 ```
 
 ### Comments and Extension
